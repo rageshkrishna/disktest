@@ -3,5 +3,6 @@ python: 2.7
 
 build:
   ci:
+    - dd bs=1M count=256 if=/dev/zero of=/tmp/zero
     - dd bs=1M count=256 if=/tmp/zero of=/tmp/copy-zero
     - dd bs=1M count=256 if=/tmp/urandom of=/tmp/copy-urandom 
